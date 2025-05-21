@@ -8,18 +8,18 @@ from app.models.review import Review
 from app.utils import extract
 
 class Product:
-    def __init__(self, product_id, reviews, product_name):
+    def __init__(self, product_id, reviews=[], product_name="", stats={}):
         self.product_id = product_id
         self.reviews = reviews
         self.product_name = product_name
         self.stats = stats
 
     def __str__(self):
+        nl="\n\n"
         return f"""product_id: {self.product_id}
             product_name: {self.product_name}
             stats: {json.dumps(self.stats, indent=4, ensure_ascii=False)}
-            reviews: {"\n\n".join([str(review) for review in self.reviews])}
-        """
+            reviews: {nl.join([str(review) for review in self.reviews])}"""
     
     def reviews_to_dict(self):
         return [review.to.dict() for review in self.reviews]
