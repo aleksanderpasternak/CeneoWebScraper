@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}
-Ekstrakcja opinii
-{% endblock %}
+{% block title %}Ekstrakcja opinii{% endblock %}
 {% block content %}
-    <form action="{{url_for('extract')}}" method="post">
-        <label for="product_id">ID produktu</label>
-        <input type="text" name="product_id" id="product_id">
-        <button type="submit">Pobierz opinie</button>
+    <form action="{{url_for('extract')}}" method="post" class="text-center">
+        <input type="text" class="form-control text-center" style="width: 200px; margin: 10px" placeholder="Identyfikator produktu" name="product_id" id="product_id">
+        <button type="submit" class="btn btn-dark text-center" style="width: 200px; margin: 10px">Pobierz Opinie</button>
     </form>
 {% endblock %}
