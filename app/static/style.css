@@ -1,0 +1,29 @@
+body {
+    background-color: #2f2f2f;
+    color: white;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: -38px;
+}
+
+h2 {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+input {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+footer {
+    bottom: 0%;
+    left:  0%;
+    right: 0%;
+    position: fixed;
+}

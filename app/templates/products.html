@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
 {% block title %}Lista produktów{% endblock %}
 {% block content %}
-
+<ul class="list-group">
+    {% for product in products %}
+    <li class="list-group item d-flex justify-cntent-between align-items-center">
+        <a type="button" class="btn btn-ceneo" href="#">{{product.product_id}}</a>
+        <span>{{product.product_name}}</span>
+        <span class="badge bg-primary rounded-pill">{{product.stts.reviews_count}}</span>
+        <span class="badge bg-primary rounded-pill">{{product.stts.reviews_count}}</span>
+        <span class="badge bg-primary rounded-pill">{{product.stts.reviews_count}}</span>
+        <span class="badge bg-primary rounded-pill">{{product.stts.reviews_count}}</span>
+        <a type="button" class="btn btn-info" href="#">CSV</a>
+        <a type="button" class="btn btn-info" href="#">XLSX</a>
+        <a type="button" class="btn btn-info" href="#">JSON</a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
 
